@@ -16,9 +16,10 @@
   margin: 14vh auto;
   grid-template-columns: repeat(4, 85px);
   grid-template-rows: repeat(6, 85px);
-  gap: 1em;
+  gap: 0.5em;
   background-color: rgb(77, 117, 163);
-  max-width: 410px;
+  max-width: 380px;
+  min-width: 380px;
   width: 100%;
 }
 
@@ -40,17 +41,21 @@
 #previous-num,
 #current-num {
   background-color: var(--display-color);
-  color: rgb(209, 228, 241);
   letter-spacing: 2px;
   margin-left: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 #previous-num {
-  font-size: 1.5em;
+  font-size: 1.2em;
+  color: rgba(209, 228, 241, 0.424);
 }
 #current-num {
   font-size: 2em;
+  overflow: hidden;
+  color: rgb(209, 228, 241);
 }
 
 button {
