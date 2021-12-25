@@ -13,13 +13,13 @@
   display: grid;
   justify-content: center;
   align-content: center;
-  margin-top: 14vh;
+  margin: 14vh auto;
   grid-template-columns: repeat(4, 85px);
   grid-template-rows: repeat(6, 85px);
   gap: 1em;
   background-color: rgb(77, 117, 163);
-  margin-left: 11.1em;
-  margin-right: 11.1em;
+  max-width: 410px;
+  width: 100%;
 }
 
 #output {
@@ -43,6 +43,8 @@
   color: rgb(209, 228, 241);
   letter-spacing: 2px;
   margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 #previous-num {
   font-size: 1.5em;
@@ -62,4 +64,5 @@ button {
 button:hover {
   background-color: rgba(114, 173, 241, 0.958);
   border: 1px solid rgb(1, 2, 3);
+  color: rgb(209, 228, 241);
 }
