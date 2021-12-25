@@ -1,15 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-  background-color:rgb(35, 52, 211); 
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(35, 52, 211);
   --display-color: rgb(45, 163, 218);
   font-weight: bold;
 }
-
-
 
 #container {
   display: grid;
@@ -22,7 +20,6 @@
   background-color: rgb(77, 117, 163);
   margin-left: 11.1em;
   margin-right: 11.1em;
-  
 }
 
 #output {
@@ -35,17 +32,22 @@
   flex-direction: column;
 }
 
-#ac, #del {
+#ac,
+#del {
   grid-column: span 2;
 }
 
-#previous-num, #current-num {
+#previous-num,
+#current-num {
   background-color: var(--display-color);
+  color: rgb(209, 228, 241);
+  letter-spacing: 2px;
+  margin-left: 5px;
 }
-#previous-num{
+#previous-num {
   font-size: 1.5em;
 }
-#current-num{
+#current-num {
   font-size: 2em;
 }
 
@@ -54,12 +56,10 @@ button {
   font-size: 2em;
   border: 1px solid rgb(124, 173, 251);
   outline: none;
-  background-color:rgba(57, 134, 221, 0.958);
+  background-color: rgba(57, 134, 221, 0.958);
 }
 
-button:hover { 
-  background-color:rgba(114, 173, 241, 0.958);
+button:hover {
+  background-color: rgba(114, 173, 241, 0.958);
   border: 1px solid rgb(1, 2, 3);
 }
-
-
