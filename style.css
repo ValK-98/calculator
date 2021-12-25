@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  background-color:rgb(35, 52, 211); 
+  --display-color: rgb(45, 163, 218);
+  font-weight: bold;
+}
+
+
+
+#container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin-top: 14vh;
+  grid-template-columns: repeat(4, 85px);
+  grid-template-rows: repeat(6, 85px);
+  gap: 1em;
+  background-color: rgb(77, 117, 163);
+  margin-left: 11.1em;
+  margin-right: 11.1em;
+  
+}
+
+#output {
+  display: flex;
+  grid-column: span 4;
+  border: 2px solid black;
+  background-color: var(--display-color);
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+#ac, #del {
+  grid-column: span 2;
+}
+
+#previous-num, #current-num {
+  background-color: var(--display-color);
+}
+#previous-num{
+  font-size: 1.5em;
+}
+#current-num{
+  font-size: 2em;
+}
+
+button {
+  cursor: pointer;
+  font-size: 2em;
+  border: 1px solid rgb(124, 173, 251);
+  outline: none;
+  background-color:rgba(57, 134, 221, 0.958);
+}
+
+button:hover { 
+  background-color:rgba(114, 173, 241, 0.958);
+  border: 1px solid rgb(1, 2, 3);
+}
+
+
