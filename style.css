@@ -3,13 +3,13 @@
 *::before,
 *::after {
   font-family: "Roboto", sans-serif;
-  background-color: rgb(35, 52, 211);
-  --display-color: rgb(45, 163, 218);
-  --background-color: rgba(77, 117, 163, 0.678);
-  --del-button-color: rgb(126, 25, 55);
-  --del-button-color-hover: rgba(156, 29, 46, 0.958);
-  --button-color: rgba(57, 134, 221, 0.897);
-  --button-hover-color: rgba(114, 173, 241, 0.958);
+  background-color: rgb(61, 75, 200);
+  --display-color: rgb(101, 163, 192);
+  --background-color: rgba(87, 90, 93, 0.678);
+  --del-button-color: rgb(153, 151, 241);
+  --del-button-color-hover: rgb(149, 148, 250);
+  --button-color: rgba(160, 192, 226, 0.897);
+  --button-hover-color: rgba(143, 183, 226, 0.897);
   --hover-text-color: rgb(209, 228, 241);
   --previous-num-color: rgba(209, 228, 241, 0.424);
   --current-num-color: rgb(209, 228, 241);
@@ -19,7 +19,7 @@
 
 #container {
   background-color: var(--background-color);
-  box-shadow: 6px 6px rgba(0, 0, 0, 0.363);
+  border: 1.5px solid var(--border-color);
   display: grid;
   justify-content: center;
   align-content: center;
@@ -34,7 +34,9 @@
 
 #output {
   background-color: var(--display-color);
-  border: 2px solid black;
+  border-bottom: 1.5px solid var(--border-color);
+  border-left: 1.5px solid var(--border-color);
+  border-right: 1.5px solid var(--border-color);
   grid-column: span 4;
   display: flex;
   align-items: flex-start;
@@ -88,4 +90,17 @@ button:hover {
   background-color: var(--button-hover-color);
   color: var(--hover-text-color);
   border: 1px solid var(--border-color);
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  color: var(--current-num-color);
+  font-style: italic;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--display-color);
 }

@@ -7,16 +7,7 @@ document.getElementById("previous-num").innerHTML = `${storedNum}`;
 //look into data numbers for HTML 
 //look into text content for HTML to create loop for number input
 
-const zero = document.getElementById("zero");
-const one = document.getElementById("one");
-const two = document.getElementById("two");
-const three = document.getElementById("three");
-const four = document.getElementById("four");
-const five = document.getElementById("five");
-const six = document.getElementById("six");
-const seven = document.getElementById("seven");
-const eight = document.getElementById("eight");
-const nine = document.getElementById("nine");
+const nums = document.querySelectorAll("number");
 const ac = document.getElementById("ac");
 const del = document.getElementById("del");
 const division = document.getElementById("division");
