@@ -1,13 +1,12 @@
-let numEntry = "0";
-let storedNum = "0";
+let numEntry = "";
+let storedNum = "";
 document.getElementById("current-num").innerHTML = `${numEntry}`;
 document.getElementById("previous-num").innerHTML = `${storedNum}`;
 
-
-//look into data numbers for HTML 
+//look into data numbers for HTML
 //look into text content for HTML to create loop for number input
 
-const nums = document.querySelectorAll("number");
+const nums = document.querySelectorAll("button.number");
 const ac = document.getElementById("ac");
 const del = document.getElementById("del");
 const division = document.getElementById("division");
@@ -17,12 +16,19 @@ const dot = document.getElementById("dot");
 const equal = document.getElementById("equal");
 const multiplier = document.getElementById("multiplier");
 
-zero.addEventListener("click", zeroAdd);
+nums.forEach((num) =>
+  num.addEventListener("click", () => numButtonCreator(num.textContent))
+);
 
-function zeroAdd() {
-  numEntry += "0";
+function numButtonCreator(num) {
+  numEntry += num;
   displayNum();
 }
+
+// function zeroAdd(num) {
+//   numEntry += num;
+//   displayNum();
+// }
 
 function displayNum() {
   document.getElementById("current-num").innerHTML = `${numEntry}`;
