@@ -16,8 +16,12 @@ function clear() {
   operation = undefined;
 }
 
+function del() {
+  displayValue = displayValue.toString().slice(0, -1);
+}
+
 function append(number) {
-  if (number === '.' && displayValue.includes('.')) return;
+  if (number === "." && displayValue.includes(".")) return;
   displayValue = displayValue + number;
   updateDisplay();
 }
@@ -34,30 +38,10 @@ numberButtons.forEach((num) =>
 );
 
 operatorButtons.forEach((operator) =>
-  operator.addEventListener("click", () => {
-    
-  })
+  operator.addEventListener("click", () => {})
 );
 
-function add(a, b) {
-  return a + b;
-}
 
-function subtract(a, b) {
-  return a - b;
-}
-
-function multiply(a, b) {
-  return a * b;
-}
-
-function divide(a, b) {
-  return a / b;
-}
-
-function operate(a, b, c) {
-  if (c === "+") return add(a, b);
-  else if (c === "-") return subtract(a, b);
-  else if (c === "*") return multiply(a, b);
-  else return divide(a, b);
+function operate() {
+  
 }
