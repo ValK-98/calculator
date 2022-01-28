@@ -28,28 +28,18 @@ operators.forEach((operator) =>
 );
 
 
-//fix below, non functioning calculator
+
 function operatorInput(operator) {
-  if (operator == "+") {
-    currentOperator += operator;
-    displayNum();
-  } else if (operator == "=") {
-    operate(firstNum, secondNum, operator);
-  }
+  return currentOperator+=operator, displayNum();
 }
 
 function numInput(num) {
-  if (firstNum < "0") {
-    firstNum += num;
-    displayNum();
-  } else {
-    secondNum += num;
-    displayNum();
-  }
+  return firstNum += num, displayNum();
 }
-//fix above 
+
+
 function displayNum() {
-  document.getElementById("current-num").innerHTML = `${firstNum}${currentOperator}${secondNum}`;
+  document.getElementById("current-num").innerHTML = `${firstNum}`;
   document.getElementById("previous-num").innerHTML = `${storedNum}`;
 }
 
