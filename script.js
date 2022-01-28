@@ -1,3 +1,6 @@
+// Stretch goal - keyboard support! 
+
+
 const numberButtons = document.querySelectorAll("[data-number]");
 const operatorButtons = document.querySelectorAll("[data-operator]");
 const acButton = document.querySelector("[data-ac]");
