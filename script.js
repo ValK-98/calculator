@@ -26,42 +26,46 @@ function append(number) {
 
 function updateDisplay() {
   currentNumberText.innerText = displayValue;
+  previousNumberText.innerText = storedValue;
   if (operation != undefined) {
     previousNumberText.innerText = `${storedValue} ${operation}`;
   } else {
-    previousNumberText.innerText = '';
+    previousNumberText.innerText = "";
   }
 }
 
-function operationChoice(operation) {
-  if (displayValue === '') return;
-  if (storedValue !== '') {
+function operationChoice(operator) {
+  if (displayValue === "") return;
+  if (storedValue !== "") {
     operate();
   }
-  operation = operation;
+  operation = operator;
   storedValue = displayValue;
   displayValue = "";
+  updateDisplay();
 }
 
 function operate() {
   let total = 0;
+  let currentNum = Number(displayValue);
+  let prevNum = Number(storedValue);
   switch (operation) {
     case "+":
-      total = displayValue + storedValue;
+      total = currentNum + prevNum;
       break;
     case "-":
       {
-        total = displayValue - storedValue;
+        total = prevNum - currentNum;
       }
       break;
     case "x":
       {
-        total = displayValue * storedValue;
+        total = currentNum * prevNum;
       }
       break;
     case "÷":
       {
-        total = displayValue / storedValue;
+        total = prevNum / currentNum;
       }
       break;
     default:
