@@ -1,29 +1,20 @@
-let firstNum = "";
-let secondNum = "";
-let currentOperator = "";
-let storedNum = "";
-document.getElementById("current-num").innerHTML = `${firstNum}`;
-document.getElementById("previous-num").innerHTML = `${storedNum}`;
+let displayValue = "";
+let storedValue = "";
+let operation = undefined;
 
-//look into data numbers for HTML
-//look into text content for HTML to create loop for number input
+const numberButtons = document.querySelectorAll("[data-number]");
+const operatorButtons = document.querySelectorAll("[data-operator]");
+const acButton = document.querySelector("[data-ac]");
+const delButton = document.querySelector("[data-del]");
+const equalButton = document.querySelector("[data-equal]");
+const previousNumberText = document.querySelector("[data-previous-number]");
+const currentNumberText = document.querySelector("[data-current-number]");
 
-const nums = document.querySelectorAll("button.number");
-const operators = document.querySelectorAll("button.operator");
-const ac = document.getElementById("ac");
-const del = document.getElementById("del");
-const division = document.getElementById("division");
-const plus = document.getElementById("plus");
-const minus = document.getElementById("minus");
-const dot = document.getElementById("dot");
-const equal = document.getElementById("equal");
-const multiplier = document.getElementById("multiplier");
-
-nums.forEach((num) =>
+numberButtons.forEach((num) =>
   num.addEventListener("click", () => numInput(num.textContent))
 );
 
-operators.forEach((operator) =>
+operatorButtons.forEach((operator) =>
   operator.addEventListener("click", () => operatorInput(operator.textContent))
 );
 
@@ -34,12 +25,12 @@ function operatorInput(operator) {
 }
 
 function numInput(num) {
-  return firstNum += num, displayNum();
+  return displayValue += num, displayNum();
 }
 
 
 function displayNum() {
-  document.getElementById("current-num").innerHTML = `${firstNum}`;
+  document.getElementById("current-num").innerHTML = `${displayValue}`;
   document.getElementById("previous-num").innerHTML = `${storedNum}`;
 }
 
