@@ -11,9 +11,7 @@ let storedValue = "";
 let operation = undefined;
 
 function clear() {
-  displayValue = "";
-  storedValue = "";
-  operation = undefined;
+  return (displayValue = ""), (storedValue = ""), (operation = undefined);
 }
 
 function del() {
@@ -28,7 +26,64 @@ function append(number) {
 
 function updateDisplay() {
   currentNumberText.innerText = displayValue;
+  if (operation !== undefined) {
+    previousNumberText.innerText = `${storedValue}+${operation}`;
+  }
 }
+
+function operationChoice(operation) {
+  if (displayValue === "") return;
+  if (storedValue !== "") {
+    operate();
+  }
+  operation = operation;
+  storedValue = displayValue;
+  displayValue = "";
+}
+
+function operate() {
+  let total = 0;
+  switch (operation) {
+    case "+":
+      total = displayValue + storedValue;
+      break;
+    case "-":
+      {
+        total = displayValue - storedValue;
+      }
+      break;
+    case "*":
+      {
+        total = displayValue * storedValue;
+      }
+      break;
+    case "/":
+      {
+        total = displayValue / storedValue;
+      }
+      break;
+    default:
+      return;
+  }
+  displayValue = total;
+  operation = undefined;
+  storedValue = "";
+}
+
+acButton.addEventListener("click", () => {
+  clear();
+  updateDisplay();
+});
+
+delButton.addEventListener("click", () => {
+  del();
+  updateDisplay();
+});
+
+equalButton.addEventListener("click", () => {
+  operate();
+  updateDisplay();
+});
 
 numberButtons.forEach((num) =>
   num.addEventListener("click", () => {
@@ -38,10 +93,8 @@ numberButtons.forEach((num) =>
 );
 
 operatorButtons.forEach((operator) =>
-  operator.addEventListener("click", () => {})
+  operator.addEventListener("click", () => {
+    operationChoice(operator.innerText);
+    updateDisplay();
+  })
 );
-
-
-function operate() {
-  
-}
