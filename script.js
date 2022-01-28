@@ -26,14 +26,16 @@ function append(number) {
 
 function updateDisplay() {
   currentNumberText.innerText = displayValue;
-  if (operation !== undefined) {
-    previousNumberText.innerText = `${storedValue}+${operation}`;
+  if (operation != undefined) {
+    previousNumberText.innerText = `${storedValue} ${operation}`;
+  } else {
+    previousNumberText.innerText = '';
   }
 }
 
 function operationChoice(operation) {
-  if (displayValue === "") return;
-  if (storedValue !== "") {
+  if (displayValue === '') return;
+  if (storedValue !== '') {
     operate();
   }
   operation = operation;
@@ -52,12 +54,12 @@ function operate() {
         total = displayValue - storedValue;
       }
       break;
-    case "*":
+    case "x":
       {
         total = displayValue * storedValue;
       }
       break;
-    case "/":
+    case "÷":
       {
         total = displayValue / storedValue;
       }
