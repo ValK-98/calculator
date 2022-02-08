@@ -3,104 +3,15 @@
 *::before,
 *::after {
   font-family: "Roboto", sans-serif;
-  background-color: rgb(61, 75, 200);
-  --display-color: rgb(101, 163, 192);
   --background-color: rgba(87, 90, 93, 0.678);
-  --del-button-color: rgb(153, 151, 241);
-  --del-button-color-hover: rgb(149, 148, 250);
-  --button-color: rgba(160, 192, 226, 0.897);
-  --button-hover-color: rgba(143, 183, 226, 0.897);
-  --hover-text-color: rgb(209, 228, 241);
-  --previous-num-color: rgba(209, 228, 241, 0.424);
-  --current-num-color: rgb(209, 228, 241);
-  --border-color: black;
-  font-weight: bold;
+  --white: rgb(209, 228, 241);
 }
 
-#container {
-  background-color: var(--background-color);
-  border: 1.5px solid var(--border-color);
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  margin: 14vh auto;
-  grid-template-columns: repeat(4, 85px);
-  grid-template-rows: repeat(6, 85px);
-  gap: 0.5em;
-  max-width: 380px;
-  min-width: 380px;
-  width: 100%;
-}
-
-#output {
-  background-color: var(--display-color);
-  border-bottom: 1.5px solid var(--border-color);
-  border-left: 1.5px solid var(--border-color);
-  border-right: 1.5px solid var(--border-color);
-  grid-column: span 4;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  flex-direction: column;
-}
-
-.ac,
-.del {
-  background-color: var(--del-button-color);
-  grid-column: span 2;
-}
-
-.ac:hover,
-.del:hover {
-  background-color: var(--del-button-color-hover);
-  color: var(--hover-text-color);
-  border: 1px solid var(--border-color);
-}
-
-#previous-num,
-#current-num {
-  background-color: var(--display-color);
-  margin-top: 5px;
-  margin-left: 5px;
-  margin-bottom: 5px;
-  letter-spacing: 2px;
-  word-wrap: break-word;
-  word-break: break-all;
-}
-#previous-num {
-  color: var(--previous-num-color);
-  font-size: 1.2em;
-}
-#current-num {
-  color: var(--current-num-color);
-  font-size: 2em;
-  overflow: hidden;
-}
-
-button {
-  background-color: var(--button-color);
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.363);
-  border: 1px solid rgb(124, 173, 251);
-  font-size: 2em;
-  cursor: pointer;
-  outline: none;
-}
-
-button:hover {
-  background-color: var(--button-hover-color);
-  color: var(--hover-text-color);
-  border: 1px solid var(--border-color);
-}
 
 #footer {
   display: flex;
   justify-content: center;
-  color: var(--current-num-color);
+  color: var(--background-color);
   font-style: italic;
   font-family: "Helvetica Neue", sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: var(--display-color);
 }
